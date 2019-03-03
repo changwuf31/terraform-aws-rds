@@ -48,6 +48,7 @@ resource "aws_db_instance" "default" {
   backup_window               = "${var.backup_window}"
   tags                        = "${module.label.tags}"
   final_snapshot_identifier   = "${length(var.final_snapshot_identifier) > 0 ? var.final_snapshot_identifier : module.final_snapshot_label.id}"
+  availability_zone           = "${var.availability_zone}"
 }
 
 resource "aws_db_parameter_group" "default" {

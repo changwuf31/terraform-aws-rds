@@ -225,3 +225,9 @@ variable "parameter_group_name" {
   description = "Name of the DB parameter group to associate"
   default     = ""
 }
+
+variable "availability_zone" {
+  type        = "string"
+  description = "Name of the availability zone"
+  default     = ""
+}
